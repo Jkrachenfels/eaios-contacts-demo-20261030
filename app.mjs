@@ -4,35 +4,17 @@
 
 import { createViewerState } from './state.mjs';
 
-// Three explicitly fictional demo contacts. Icons are local original SVGs,
-// labeled illustrative — not photographs or retrieved profiles.
-const DEMO_CONTACTS = [
-  {
-    personId: 'demo-alex',
-    displayName: 'Alex Example',
-    role: 'Operations lead',
-    organization: 'Fictional Demo Co',
-    note: 'Requested the updated project timeline. Synthetic note only.',
-    icon: 'icons/alex.svg',
-  },
-  {
-    personId: 'demo-sam',
-    displayName: 'Sam Sample',
-    role: 'Engineering lead',
-    organization: 'Fictional Demo Co',
-    note: 'Review the approved adapter contract and test evidence.',
-    icon: 'icons/sam.svg',
-  },
-  {
-    personId: 'demo-jordan',
-    displayName: 'Jordan Demo',
-    role: 'Design lead',
-    organization: 'Fictional Demo Co',
-    note: 'Confirm the display contrast pass before the next review.',
-    icon: 'icons/jordan.svg',
-  },
+// Owner-requested first-name-only pilot labels. No full names, employer,
+// photos, account URLs, canonical identities or biometric templates are public.
+// Local SVGs are illustrative placeholders, not participant photographs.
+const PILOT_CONTACTS = [
+  { personId: 'pilot-01', displayName: 'Halle', role: 'Photo not loaded', organization: '',
+    note: 'Photo pending. Recognition is not connected.', icon: 'icons/alex.svg' },
+  { personId: 'pilot-02', displayName: 'Oya', role: 'Photo not loaded', organization: '',
+    note: 'Photo pending. Recognition is not connected.', icon: 'icons/sam.svg' },
+  { personId: 'pilot-03', displayName: 'Katie', role: 'Photo not loaded', organization: '',
+    note: 'Photo pending. Recognition is not connected.', icon: 'icons/jordan.svg' },
 ];
-
 const state = createViewerState();
 const $ = id => document.getElementById(id);
 const screens = {
@@ -79,7 +61,7 @@ function buildList(contacts) {
     text.className = 'text';
     const name = document.createElement('p'), meta = document.createElement('p');
     name.className = 'name'; name.textContent = contact.displayName;
-    meta.className = 'meta'; meta.textContent = contact.role + ' · ' + contact.organization;
+    meta.className = 'meta'; meta.textContent = [contact.role, contact.organization].filter(Boolean).join(' · ');
     text.append(name, meta); content.append(image, text); item.append(content);
     item.addEventListener('focus', () => markDirectoryFocus(index));
     item.addEventListener('click', () => {
@@ -184,5 +166,5 @@ document.addEventListener('visibilitychange', () => {
 });
 window.addEventListener('pagehide', () => { state.onHidden(); render({ focus: false }); });
 window.addEventListener('pageshow', () => render());
-state.loadDirectory(DEMO_CONTACTS);
+state.loadDirectory(PILOT_CONTACTS);
 render();

@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex,nofollow">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EAIOS Contacts — known-contact viewer for Meta Ray-Ban Display. Demo contacts only; no live account connection.">
+  <meta name="description" content="EAIOS Contacts pilot viewer. First names only; no photographs, live accounts or recognition connected.">
   <meta name="mrbd-web-app-capable" content="yes">
   <title>EAIOS Contacts</title>
   <link rel="stylesheet" href="styles.css">
@@ -16,13 +16,13 @@
   <main class="app-root" aria-label="EAIOS Contacts">
     <header class="app-header">
       <p class="app-label">EAIOS CONTACTS</p>
-      <h1 class="app-title">Known contacts</h1>
-      <p class="app-sub" id="status-label">Demo contacts · No live account connection</p>
+      <h1 class="app-title">Pilot contacts</h1>
+      <p class="app-sub" id="status-label">Names only · Recognition off</p>
     </header>
 
     <!-- Directory / picker screen -->
     <section class="screen screen-directory" id="screen-directory" aria-live="polite">
-      <ul class="contact-list" id="contact-list" role="listbox" aria-label="Demo contacts">
+      <ul class="contact-list" id="contact-list" role="listbox" aria-label="Pilot contacts">
         <!-- populated by app.mjs -->
       </ul>
       <p class="hint">Arrows: move focus · Enter: select · Escape: back</p>
@@ -43,7 +43,7 @@
     <!-- Empty state -->
     <section class="screen screen-empty" id="screen-empty" aria-live="polite" hidden>
       <p class="empty-title">No contacts available</p>
-      <p class="empty-sub">Open the directory to load demo contacts.</p>
+      <p class="empty-sub">Open the directory to view pilot slots.</p>
     </section>
 
     <!-- Cleared state -->
@@ -63,7 +63,7 @@
     </nav>
 
     <footer class="app-footer">
-      <p>600 × 600 browser preview — not a physical-device test</p>
+      <p>Manual selection · Photos not loaded</p>
     </footer>
   </main>
 </body>

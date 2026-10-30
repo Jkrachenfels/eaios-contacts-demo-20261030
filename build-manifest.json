@@ -1,14 +1,14 @@
 {
   "name": "EAIOS Contacts",
-  "version": "0.1.0",
-  "builtAt": "2026-10-30T19:04:11.786Z",
-  "scope": "Fictional manually selected contact viewer; no live APIs, real employees, camera or recognition",
+  "version": "0.1.1",
+  "builtAt": "2026-10-30T19:29:33.430Z",
+  "scope": "First-name-only manually selected pilot slots; no photographs, surnames, employer, profile links, account API, camera or recognition",
   "physicalGlassesVerified": false,
   "files": [
     {
       "path": "index.html",
-      "bytes": 3212,
-      "sha256": "b7cfe948a923891153112933c0f2f22c06c44845c6bba3637a86077a7e580ff9"
+      "bytes": 3166,
+      "sha256": "3fc3da74f09e9c2ce1cb6ca9bb812105667a739aa8d8d87fb98729705e4dbd56"
     },
     {
       "path": "styles.css",
@@ -22,8 +22,8 @@
     },
     {
       "path": "app.mjs",
-      "bytes": 7612,
-      "sha256": "42ae17cb119a129601a331d37ff6245330ac8767bedb8c8af7a1f4babadee227"
+      "bytes": 7542,
+      "sha256": "df048c0d913398fd9cd6338e36c5f4ff820b22328d8a0675a586fd44f3824686"
     },
     {
       "path": "icons/alex.svg",
