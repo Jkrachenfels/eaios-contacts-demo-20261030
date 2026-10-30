@@ -1,0 +1,44 @@
+{
+  "name": "EAIOS Contacts",
+  "version": "0.1.0",
+  "builtAt": "2026-10-30T19:04:11.786Z",
+  "scope": "Fictional manually selected contact viewer; no live APIs, real employees, camera or recognition",
+  "physicalGlassesVerified": false,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 3212,
+      "sha256": "b7cfe948a923891153112933c0f2f22c06c44845c6bba3637a86077a7e580ff9"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 5374,
+      "sha256": "4ba0c7687077a8ac0f549356abd706a906ab5d23806fd47e6b9de4018b3b00a1"
+    },
+    {
+      "path": "state.mjs",
+      "bytes": 6377,
+      "sha256": "91d1342ae17da6bdfe5009b1574f1413b97a33a4ec90cf5921c395e024a41433"
+    },
+    {
+      "path": "app.mjs",
+      "bytes": 7612,
+      "sha256": "42ae17cb119a129601a331d37ff6245330ac8767bedb8c8af7a1f4babadee227"
+    },
+    {
+      "path": "icons/alex.svg",
+      "bytes": 339,
+      "sha256": "3cf626b9b2349784633432209f20abd7a85afc8bd745212860990375dda09252"
+    },
+    {
+      "path": "icons/sam.svg",
+      "bytes": 339,
+      "sha256": "b89290659940b62d12aaed16422bb3b90fde36a4303e6c919bccca56e03c0e98"
+    },
+    {
+      "path": "icons/jordan.svg",
+      "bytes": 339,
+      "sha256": "5b9346750d4c5a672b842dece133dea25d5c0212b9499bd8491888b98680fe05"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EAIOS Contacts — known-contact viewer for Meta Ray-Ban Display. Demo contacts only; no live account connection.">
+  <meta name="mrbd-web-app-capable" content="yes">
+  <title>EAIOS Contacts</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <main class="app-root" aria-label="EAIOS Contacts">
+    <header class="app-header">
+      <p class="app-label">EAIOS CONTACTS</p>
+      <h1 class="app-title">Known contacts</h1>
+      <p class="app-sub" id="status-label">Demo contacts · No live account connection</p>
+    </header>
+
+    <!-- Directory / picker screen -->
+    <section class="screen screen-directory" id="screen-directory" aria-live="polite">
+      <ul class="contact-list" id="contact-list" role="listbox" aria-label="Demo contacts">
+        <!-- populated by app.mjs -->
+      </ul>
+      <p class="hint">Arrows: move focus · Enter: select · Escape: back</p>
+    </section>
+
+    <!-- Detail screen -->
+    <section class="screen screen-detail" id="screen-detail" aria-live="polite" hidden>
+      <div class="detail-card">
+        <img class="detail-icon" id="detail-icon" alt="" width="72" height="72">
+        <p class="detail-label">Illustrative icon — not a photograph</p>
+        <h2 class="detail-name" id="detail-name"></h2>
+        <p class="detail-role" id="detail-role"></p>
+        <p class="detail-org" id="detail-org"></p>
+        <p class="detail-note" id="detail-note"></p>
+      </div>
+    </section>
+
+    <!-- Empty state -->
+    <section class="screen screen-empty" id="screen-empty" aria-live="polite" hidden>
+      <p class="empty-title">No contacts available</p>
+      <p class="empty-sub">Open the directory to load demo contacts.</p>
+    </section>
+
+    <!-- Cleared state -->
+    <section class="screen screen-cleared" id="screen-cleared" aria-live="polite" hidden>
+      <p class="empty-title">Card cleared</p>
+      <p class="empty-sub">Press Open directory to continue.</p>
+    </section>
+
+    <!-- Navigation controls -->
+    <nav class="app-nav" aria-label="Contact actions">
+      <button type="button" id="btn-prev" class="btn" disabled>Previous</button>
+      <button type="button" id="btn-select" class="btn btn-primary" disabled>Select</button>
+      <button type="button" id="btn-next" class="btn" disabled>Next</button>
+      <button type="button" id="btn-back" class="btn" disabled>Back</button>
+      <button type="button" id="btn-clear" class="btn" disabled>Clear</button>
+      <button type="button" id="btn-open" class="btn btn-primary">Open directory</button>
+    </nav>
+
+    <footer class="app-footer">
+      <p>600 × 600 browser preview — not a physical-device test</p>
+    </footer>
+  </main>
+</body>
+</html>
